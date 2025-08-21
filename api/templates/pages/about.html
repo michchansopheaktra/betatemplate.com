@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<section class="page-header bg-tertiary">
+	<div class="container">
+		<div class="row">
+			<div class="col-8 mx-auto text-center">
+				<h2 class="mb-3 text-capitalize">About</h2>
+				<ul class="list-inline breadcrumbs text-capitalize" style="font-weight:500">
+					<li class="list-inline-item"><a href="{% url 'post_list' %}">Home</a>
+					</li>
+					<li class="list-inline-item">/ &nbsp; <a href="{% url 'about' %}">About</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	{% include "_page_header.html" %}
+</section>
+<section class="my-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-7">
+				<h2>About Betatemplate.com</h2>
+				<p>
+				<strong>Betatemplate.com</strong> is your go-to destination for modern, professional, and customizable web templates. 
+				Whether you’re a developer, designer, or business owner, we provide high-quality 
+				<strong>Bootstrap</strong> and <strong>HTML templates</strong> that make building websites faster and easier.
+				</p>
+				<p>
+				Our collection covers everything from <strong>Landing Pages</strong> that convert, to sleek 
+				<strong>UI Templates</strong> designed for flawless user experiences. Need to set up a blog or publish articles? 
+				Explore our creative <strong>Blog Templates</strong> built for speed and readability.
+				</p>
+				<p>
+				For CMS and eCommerce platforms, Betatemplate.com offers fully responsive themes for 
+				<strong>WordPress, Shopify, WooCommerce, OpenCart</strong>, and more—helping you launch professional 
+				online stores and content-driven websites without hassle.
+				</p>
+				<p>
+				We focus on <strong>clean code, responsive layouts, and modern design trends</strong>, so you can spend less time 
+				worrying about development and more time growing your business. Whether you’re creating a personal blog, 
+				a business site, or a high-performance eCommerce store, you’ll find the right solution at Betatemplate.com.
+				</p>
+			</div>
+			<div class="col-lg-4 mt-6 mt-lg-0 me-3">
+				<img loading="lazy" decoding="async" src="{% static 'images/about.png'%}" alt="Business Loans &lt;br&gt; For Daily Expenses" class="rounded">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="my-5">
+	<div class="container">
+	  <div class="row">
+		<div class="col-lg-4 col-md-6">
+		  <div class="section-title pt-4">
+			<p class="text-primary text-uppercase fw-bold mb-3">Our Services</p>
+			<h1>Our online and offline services</h1>
+			<!-- <p>Lorem ipsum dolor sit amet, consectetur adipreiscing elit. Lacus penatibus tincidunt</p> -->
+		  </div>
+		</div>
+		{% for link in services %}
+		<div class="col-lg-4 col-md-6 service-item">
+		  <a class="text-black" href="{{link.link}}">
+			<div class="block">
+			  {% if link.image %}
+				<img src="{{ link.image.url }}" alt="{{ service.title }}" class="img-fluid mb-3">
+			  {% endif %}
+			  <h3 class="mb-3 service-title">{{link.title}}</h3>
+			  <p class="mb-0 service-description">{{link.description}}</p>
+			</div>
+		  </a>
+		</div>
+		{% empty %}
+			<p>No affiliate links yet.</p>
+		{% endfor %}
+
+	  </div>
+	</div>
+  </section>
+
+  <section class="homepage_tab position-relative">
+	<div class="section container">
+	  <div class="row justify-content-center">
+		<div class="col-lg-10">
+		  <ul class="payment_info_tab nav nav-pills justify-content-center mb-4" id="pills-tab" role="tablist">
+			<li class="nav-item m-2" role="presentation"> <a
+				class="nav-link btn btn-outline-primary effect-none text-dark active" id="pills-how-much-can-i-recive-tab"
+				data-bs-toggle="pill" href="#pills-how-much-can-i-recive" role="tab"
+				aria-controls="pills-how-much-can-i-recive" aria-selected="true">Who We Are?</a>
+			</li>
+			<li class="nav-item m-2" role="presentation"> <a
+				class="nav-link btn btn-outline-primary effect-none text-dark " id="pills-how-much-does-it-costs-tab"
+				data-bs-toggle="pill" href="#pills-how-much-does-it-costs" role="tab"
+				aria-controls="pills-how-much-does-it-costs" aria-selected="true">What We Offer?</a>
+			</li>
+		  </ul>
+		  <div class="rounded shadow bg-white p-5 tab-content" id="pills-tabContent">
+			<div class="tab-pane fade show active" id="pills-how-much-can-i-recive" role="tabpanel"
+			  aria-labelledby="pills-how-much-can-i-recive-tab">
+			  <div class="row align-items-center">
+				<div class="col-md-6 order-1 order-md-0">
+				  <div class="content-block">
+					<h3 class="mb-4">Who We Are?</h3>
+					<div class="content">
+					  <p>At Betatemplate.com, we are passionate creators dedicated to delivering high-quality, ready-to-use website templates for developers, designers, and businesses. Our mission is to simplify web design with modern Bootstrap, HTML, WordPress, Shopify, WooCommerce, and OpenCart templates that are fully responsive, customizable, and built to perform.</p>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-6 order-0 order-md-1 mb-5 mt-md-0">
+				  <div class="image-block text-center">
+					<img loading="lazy" decoding="async"
+					  src="{% static 'images/who-we-are.png' %}" alt="How Much Can I Recive?" class="img-fluid">
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="tab-pane fade " id="pills-how-much-does-it-costs" role="tabpanel"
+			  aria-labelledby="pills-how-much-does-it-costs-tab">
+			  <div class="row align-items-center">
+				<div class="col-md-6 order-1 order-md-0">
+				  <div class="content-block">
+					<h3 class="mb-4">What We Offer?</h3>
+					<div class="content">
+					  <p>At Betatemplate.com, we offer a wide range of professionally designed templates including Bootstrap and HTML templates, Landing Pages, UI Kits, Blog Templates, and fully responsive themes for WordPress, Shopify, WooCommerce, OpenCart, and more. Our templates are built with clean code, modern design, and easy customization—helping you create stunning websites quickly and effortlessly.</p>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-6 order-0 order-md-1 mb-5 mt-md-0">
+				  <div class="image-block text-center">
+					<img loading="lazy" decoding="async" src="{% static 'images/who-we-offer.png' %}" alt="How Much Does It Costs?" class="img-fluid">
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+  
+
+
+
+{% endblock %}
