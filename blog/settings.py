@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-v40*=5qv%)q^=sb-kpav+&uvc3!^%8jx%9nu%0_g@%$w^u^^$w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['betatemplatecom-production.up.railway.app', 'wwww.betatips.com', '127.0.0.1']
-CSRF_TRUSTED_ORIGINS = ['https://betatemplatecom-production.up.railway.app/', 'https://www.betatips.com']
+ALLOWED_HOSTS = ['betatemplatecom-production.up.railway.app', 'wwww.betatemplatecom-production.up.railway.app', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://betatemplatecom-production.up.railway.app', 'https://www.betatemplatecom-production.up.railway.app']
 
 
 # Application definition
