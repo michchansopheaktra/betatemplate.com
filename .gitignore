@@ -11,7 +11,7 @@ media/
 
 # Static files collected by collectstatic
 staticfiles/
-static/
+# static/
 
 # Virtual environment
 env/
