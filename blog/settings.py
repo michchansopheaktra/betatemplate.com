@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-v40*=5qv%)q^=sb-kpav+&uvc3!^%8jx%9nu%0_g@%$w^u^^$w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['betatemplate.com', 'wwww.betatemplate.com', '127.0.0.1']
 CSRF_TRUSTED_ORIGINS = ['https://betatemplate.com', 'https://www.betatemplate.com']
