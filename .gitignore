@@ -1,7 +1,7 @@
 # Python cache files
-__pycache__/
-*.py[cod]
-*$py.class
+# __pycache__/
+# *.py[cod]
+# *$py.class
 
 # Django database
 db.sqlite3
@@ -14,12 +14,12 @@ staticfiles/
 # static/
 
 # Virtual environment
-env/
-venv/
-*.pyenv
+# env/
+# venv/
+# *.pyenv
 
 # Environment variables
-.env
+# .env
 
 # OS / Editor files
 # .DS_Store
@@ -27,4 +27,4 @@ venv/
 # .idea/
 
 # Log files
-*.log
+# *.log
