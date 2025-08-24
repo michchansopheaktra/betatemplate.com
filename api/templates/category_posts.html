@@ -40,7 +40,7 @@
 								</div>
 								<div class="pt-2">
 									<!-- <p class="mb-3">14 Mar, 2020</p> -->
-                  <span><a href="{{ post.category.get_absolute_url }}">{{ post.category.name }}</a> / {{post.created_at.date}} / Download : {{ post.views }}</span>
+                  <span><a href="{{ post.category.get_absolute_url }}">{{ post.category.name }}</a> / Download : {{ post.views }}</span>
 									<h5 class="h5"><a href="{{ post.get_absolute_url }}">{{ post.title|truncatewords:8 }}</a></h5>
 									<!-- <p>{{ post.content|truncatewords:30|safe }}</p> -->
 								</div>
